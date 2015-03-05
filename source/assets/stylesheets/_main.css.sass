@@ -2,11 +2,19 @@
 // VARIABLES
 // =========
 
+// Sizes
 $tiny: 0.14286rem
 $tiny-2x: 0.28571rem
-$main-dark: #333
-$oswald: "Oswald", sans-serif
+
+// Colors
+$dark-gray: #333
+$medium-gray: #666
 $nav-bg: rgba(255, 255, 255, 0.93)
+
+// Fonts
+$play: "Play", sans-serif
+$goudy: "Sorts Mill Goudy", serif
+$helvetica: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif
 
 
 // ============
@@ -35,7 +43,7 @@ $nav-bg: rgba(255, 255, 255, 0.93)
   display: inline-block
   width: 2rem
   height: $tiny-2x
-  background: $main-dark
+  background: $medium-gray
   border-radius: $tiny
   position: absolute
   left: 0
@@ -80,20 +88,24 @@ a
 h1
   margin-top: 0
   padding-top: 21px
-  font-family: $oswald
   font-size: 3em
   line-height: 1.8
   text-transform: uppercase
 
+h2
+  margin-top: 0
+  padding-top: 21px
+  font-family: $play
+
 p
   margin-bottom: 0
-  padding-bottom: 20px
+  padding-bottom: 10px
   font-size: 1em
   line-height: 2
 
 body
-  font-family: $oswald
-  font-weight: 300
+  
+  font-weight: 200
   font-smoothing: antialiased
 
   &:before
@@ -104,11 +116,14 @@ body
     position: fixed
     +webkit-transform(Z, 0)
     z-index: -1
-    background: url(http://i.kinja-img.com/gawker-media/image/upload/s--ul5Xq6Y3--/706740029147231632.jpg) no-repeat center center fixed
+    background: url(../images/bg-salinas.jpg) no-repeat center center fixed
     background-size: cover
     -webkit-filter: sepia(0.5)
     filter: sepia(0.5)
-    opacity: 0.4
+    opacity: 0.5
+
+nav i
+  color: #666
 
 
 // ===========
@@ -117,7 +132,7 @@ body
 
 [data-navicon="button"]
   display: inline-block
-  margin: 0 1em
+  margin: 0
   border: none
   cursor: pointer
   -webkit-user-select: none
@@ -140,7 +155,7 @@ body
     display: inline-block
     width: 2rem
     height: $tiny-2x
-    background: $main-dark
+    background: $medium-gray
     border-radius: $tiny
     @extend %webkit-transition-fast
     position: relative
@@ -188,7 +203,6 @@ body
   max-height: 56px
   overflow: hidden
   z-index: 999
-  font-family: $oswald
   background: none
   @extend %webkit-transition-fast
 
@@ -212,9 +226,8 @@ body
   position: relative
   text-align: center
   min-height: 100vh
-  font-family: $oswald
   letter-spacing: 2px
-  color: $main-dark
+  color: $dark-gray
 
   .hero__title 
     display: table-cell
@@ -225,6 +238,7 @@ body
     vertical-align: middle
     font-size: 3em
     line-height: 1.3
+    font-family: $play
 
   .hero__tagline
     display: table-row
@@ -236,10 +250,7 @@ body
   flex: 1
   margin-top: 0
   width: 50px
-  font-size: 25px
   line-height: 1
-  text-transform: uppercase
-  color: $main-dark
 
 .my-logo
   img
@@ -254,17 +265,20 @@ body
       transform: rotate(360deg)
 
 nav
+  font-family: $play
   a
-    color: $main-dark
+    color: $medium-gray
     font-size: 2em
     text-transform: uppercase
+  .fa
+    font-size: 2em
 
   .nav__list
     list-style: none
     padding-left: 0
 
     .nav__list-item
-      line-height: 1.5
+      line-height: 2
 
 .icon-menu
   cursor: pointer
@@ -285,7 +299,7 @@ nav
   height: 48px
   border-radius: 12px
   background: white
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3)
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 1)
   border: 2px solid white
   position: absolute
   bottom: 40px
@@ -298,13 +312,14 @@ nav
     width: 9px
     height: auto
     opacity: 0.15
+
 .mouse__wheel
   display: block
   margin: 6px auto
   width: 2px
   height: 2px
   border-radius: 4px
-  background: $main-dark
+  background: $dark-gray
   border: 1px solid transparent
   -webkit-animation-duration: 1s
   animation-duration: 1s
@@ -336,10 +351,16 @@ section
   &:nth-child(odd)
     background: #333
     color: #ccc
+    @include display(flex)
+    text-align: justify
+    height: 100vh
 
   &:nth-child(even)
     background: #ccc
     color: #333
+    @include display(flex)
+    text-align: justify
+    height: 100vh
 
   &.active
 
@@ -363,6 +384,10 @@ section
     .grid
       @extend %webkit-align
 
+  .my-logo
+    img
+      margin-top: 0
+
   .hero
     @extend %webkit-align
     -webkit-justify-content: center
@@ -381,8 +406,10 @@ section
     a
       font-size: 12px
 
+    .fa
+      font-size: 12px
+
     .active
-      // border-top: 1px solid $main-dark
       color: #666666
       border-bottom: 3px solid #666666
       transition: all 100ms 100ms linear
@@ -396,5 +423,3 @@ section
 
   .icon-menu
     display: none
-
-  

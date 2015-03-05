@@ -7,7 +7,7 @@ $nav_header = $('.banner')
 $navicon = $('[data-navicon="button"]')
 header_height = $('.banner').height()
 hero_height = $('.hero').height()
-offset_val = hero_height - (header_height + 20)
+offset_val = hero_height - header_height
 eventType = if document.ontouchstart != null then 'click' else 'touchstart'
 
 
