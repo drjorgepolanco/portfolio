@@ -1,23 +1,26 @@
+// =========
 // VARIABLES
+// =========
 
 $tiny: 0.14286rem
 $tiny-2x: 0.28571rem
-
 $main-dark: #333
-
 $oswald: "Oswald", sans-serif
-
 $nav-bg: rgba(255, 255, 255, 0.93)
 
 
+// ============
 // PLACEHOLDERS
+// ============
 
 %webkit-transition-fast
   -webkit-transition: 0.3s
   transition: 0.3s
 
 
+// ======
 // MIXINS
+// ======
 
 =webkit-transform-origin($x, $y)
   -webkit-transform-origin: $x $y
@@ -49,62 +52,10 @@ $nav-bg: rgba(255, 255, 255, 0.93)
   -webkit-transform: translate#{$axis}($dimension)
   transform: translate#{$axis}($dimension)
 
-  
-// MOBILE MENU
 
-[data-navicon="button"]
-  display: inline-block
-  margin: 0 1em
-  border: none
-  cursor: pointer
-  -webkit-user-select: none
-  -moz-user-select: none
-  -ms-user-select: none
-  user-select: none
-
-  > *
-    display: block
-
-  &:focus
-    outline: none
-
-.navicon
-  padding: 1rem 0.5rem
-  @extend %webkit-transition-fast
-
-  .navicon__lines
-    display: inline-block
-    width: 2rem
-    height: $tiny-2x
-    background: $main-dark
-    border-radius: $tiny
-    @extend %webkit-transition-fast
-    position: relative
-
-    &:before
-      +navicon-lines(0.5rem)
-
-    &:after
-      +navicon-lines(-0.5rem)
-
-.is--closed .navicon__lines
-  -webkit-transform: scale3d(0.8, 0.8, 0.8)
-  transform: scale3d(0.8, 0.8, 0.8)
-
-.navicon-x.is--closed .navicon__lines
-  background: transparent
-
-  &:before, 
-  &:after
-    +webkit-transform-origin(50%, 50%)
-    top: 0
-    width: 2rem
-
-  &:before
-    +webkit-transform-rotate(45deg)
-
-  &:after
-    +webkit-transform-rotate(-45deg)
+// ==========================
+// TYPOGRAPHY AND MAIN LAYOUT
+// ==========================
 
 *
   &:before,
@@ -159,6 +110,71 @@ body
     filter: sepia(0.5)
     opacity: 0.4
 
+
+// ===========
+// MOBILE MENU
+// ===========
+
+[data-navicon="button"]
+  display: inline-block
+  margin: 0 1em
+  border: none
+  cursor: pointer
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+  > *
+    display: block
+
+  &:focus
+    outline: none
+
+.navicon
+  padding: 1rem 0.5rem
+  @extend %webkit-transition-fast
+  background: transparent
+
+  .navicon__lines
+    display: inline-block
+    width: 2rem
+    height: $tiny-2x
+    background: $main-dark
+    border-radius: $tiny
+    @extend %webkit-transition-fast
+    position: relative
+
+    &:before
+      +navicon-lines(0.5rem)
+
+    &:after
+      +navicon-lines(-0.5rem)
+
+.is--closed .navicon__lines
+  -webkit-transform: scale3d(0.8, 0.8, 0.8)
+  transform: scale3d(0.8, 0.8, 0.8)
+
+.navicon-x.is--closed .navicon__lines
+  background: transparent
+
+  &:before, 
+  &:after
+    +webkit-transform-origin(50%, 50%)
+    top: 0
+    width: 2rem
+
+  &:before
+    +webkit-transform-rotate(405deg)
+
+  &:after
+    +webkit-transform-rotate(-405deg)
+
+
+// ======
+// HEADER
+// ======
+
 .grid
   max-width: 1040px
   margin: 0 auto
@@ -185,7 +201,6 @@ body
     opacity: 1
 
   // .grid
-  //   padding: 0
   //   max-width: 1040px
   //   margin: 0 auto
   //   padding: 0 5%
@@ -226,6 +241,18 @@ body
   text-transform: uppercase
   color: $main-dark
 
+.my-logo
+  img
+    height: 40px
+    width: 40px
+    margin-top: 8px
+    -webkit-transition: -webkit-transform .3s ease-in-out
+    transition: transform .3s ease-in-out
+
+    &:hover
+      -webkit-transform: rotate(360deg)
+      transform: rotate(360deg)
+
 nav
   a
     color: $main-dark
@@ -244,10 +271,6 @@ nav
   position: absolute
   top: 0
   right: 22px
-
-.section
-  background: #333
-  color: #ccc
 
 .is-sticky
   position: fixed
@@ -309,12 +332,20 @@ nav
     opacity: 0
     +webkit-transform(Y, 14px)
 
+section
+  &:nth-child(odd)
+    background: #333
+    color: #ccc
 
-.my-logo
-  img
-    height: 40px
-    width: 40px
+  &:nth-child(even)
+    background: #ccc
+    color: #333
 
+  &.active
+
+// ===========
+// FULL SCREEN
+// ===========
 
 @media only screen and (min-width: 766px)
   
@@ -346,15 +377,19 @@ nav
     .hero__tagline
       display: block
 
-  .logo
-    margin-top: 10px
-
   nav
-    // width: 100%
-
     a
       font-size: 12px
 
+    .active
+      // border-top: 1px solid $main-dark
+      color: #666666
+      border-bottom: 3px solid #666666
+      transition: all 100ms 100ms linear
+      font-weight: bold
+      webkit-font-smoothing: antialiased
+      -moz-osx-font-smoothing: grayscale
+  
   .nav__list-item
     display: inline-block
     margin-left: 35px
@@ -362,4 +397,4 @@ nav
   .icon-menu
     display: none
 
-
+  
