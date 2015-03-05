@@ -1,6 +1,8 @@
 %header.banner{:role => "banner"}
-  .grid
-    %a.logo.scrollto{:href => "#hero", :rel => "bookmark"} FM
+  .grid.my-logo
+    = link_to image_tag('heroica_gray_transp.png'), '#hero', :class => "logo scrollto", :rel => "bookmark" 
+    / %a.logo.scrollto{:href => "#hero", :rel => "bookmark"} 
+    /   = image_tag 'heroica_gray_transp.png'
     %button.icon-menu.navicon.navicon-x{"aria-label" => "Toggle Navigation", "data-navicon" => "button", :role => "button", :type => "button"}
       %span.navicon__lines
     %nav{:role => "navigation"}
