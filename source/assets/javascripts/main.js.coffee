@@ -7,7 +7,7 @@ $nav_header = $('.banner')
 $navicon = $('[data-navicon="button"]')
 header_height = $('.banner').height()
 hero_height = $('.hero').height()
-offset_val = hero_height - header_height
+offset_val = hero_height - header_height - 3
 eventType = if document.ontouchstart != null then 'click' else 'touchstart'
 
 
@@ -47,7 +47,7 @@ anchorScroll = (event) ->
   offset = header_height
   target = $(id).offset().top - offset
 
-  $('html, body').animate({ scrollTop: target }, 400)
+  $('html, body').animate({ scrollTop: target }, 500)
   event.preventDefault() 
   return
 
@@ -76,7 +76,7 @@ nav_height = nav.outerHeight()
 $(window).on 'scroll', ->
   cur_pos = $(@).scrollTop()
   sections.each ->
-    top = $(@).offset().top - nav_height - 2
+    top = $(@).offset().top - nav_height
     bottom = top + $(@).outerHeight()
 
     if cur_pos >= top and cur_pos <= bottom
@@ -90,3 +90,4 @@ $(window).on 'scroll', ->
 $('#hero').on 'mouseenter', ->
   nav.find('a').removeClass 'active'
   sections.removeClass 'active'
+
