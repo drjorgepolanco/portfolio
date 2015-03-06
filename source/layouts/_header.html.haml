@@ -1,0 +1,33 @@
+%header.banner{:role => "banner"}
+  .grid.my-logo
+    = link_to image_tag('heroica_light_gray.png'), 
+                        '#hero', 
+                        :class => "logo scrollto", 
+                        :rel => "bookmark" 
+
+    %button.icon-menu.navicon.navicon-x{"aria-label" => "Toggle Navigation", 
+                                        "data-navicon" => "button", 
+                                        :role => "button", :type => "button"}
+      %span.navicon__lines
+
+    %nav{:role => "navigation"}
+      %ul.nav__list
+        %li.nav__list-item
+          %i.fa.fa-child
+          %a.scrollto{:href => "#about"} 
+            About
+
+        %li.nav__list-item
+          %i.fa.fa-wrench
+          %a.scrollto{:href => "#services"} 
+            Services
+
+        %li.nav__list-item
+          %i.fa.fa-cogs
+          %a.scrollto{:href => "#skills"}  
+            Skills
+
+        %li.nav__list-item
+          %i.fa.fa-envelope
+          %a.scrollto{:href => "#contact"}  
+            Contact

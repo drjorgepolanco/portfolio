@@ -1,11 +1,13 @@
+// VENDOR
 @import "vendor/normalize";
-
 @import "bourbon";
+@import "compass";
 // @import "base/base";
 @import "neat";
 
-@import "main";
 
+// CUSTOM
+@import "main";
 @font-face {
   font-family: "Play";
   src: url(../fonts/Play-Regular.ttf);

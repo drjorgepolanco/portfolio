@@ -1,0 +1,36 @@
+$(document).ready ->
+  particlesJS "particles-js",
+    particles:
+      color: "#666"
+      shape: "circle"
+      opacity: 1
+      size: 2.5
+      size_random: true
+      nb: 100
+      line_linked:
+        enable_auto: true
+        distance: 250
+        color: "#FF3300"
+        opacity: 1
+        width: 0.2
+        condensed_mode:
+          enable: false
+          rotateX: 600
+          rotateY: 600
+      anim:
+        enable: true
+        speed: 5
+    interactivity:
+      enable: true
+      mouse:
+        distance: 200
+      mode: "grab"
+    retina_detect: true
+
+h = $(window).height()
+canvas = $("#particles-js")
+canvas.css("height", h)
+
+c = document.querySelector("canvas")
+$('div#particles-js canvas').css("height", h)
+return

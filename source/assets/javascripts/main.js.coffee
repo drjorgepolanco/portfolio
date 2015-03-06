@@ -47,7 +47,7 @@ anchorScroll = (event) ->
   offset = header_height
   target = $(id).offset().top - offset
 
-  $('html, body').animate({ scrollTop: target }, 500)
+  $('body').animate({ scrollTop: target }, 700)
   event.preventDefault() 
   return
 
@@ -87,7 +87,7 @@ $(window).on 'scroll', ->
     return
   return
 
-$('#hero').on 'mouseenter', ->
+$('#particles-js').on 'mouseenter', ->
   nav.find('a').removeClass 'active'
   sections.removeClass 'active'
 

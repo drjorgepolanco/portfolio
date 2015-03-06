@@ -72,15 +72,18 @@ $helvetica: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif
 
 html
   +box-sizing(border-box)
+  height: 100%
 
   &.pinned
     overflow: hidden
+
+body
+  height: auto
 
 html,
 body
   margin: 0
   padding: 0
-  height: 100%
 
 a
   text-decoration: none
@@ -116,7 +119,8 @@ body
     position: fixed
     +webkit-transform(Z, 0)
     z-index: -1
-    background: url(../images/bg-salinas.jpg) no-repeat center center fixed
+    // background: url(../images/bg-salinas.jpg) no-repeat center center fixed
+    background: linear-gradient(45deg, black, white)
     background-size: cover
     -webkit-filter: sepia(0.5)
     filter: sepia(0.5)
@@ -405,9 +409,9 @@ section
 
     .active
       color: $medium-gray
-      border-bottom: 2px solid $medium-gray
+      border-bottom: 1px solid $medium-gray
       transition: all 100ms 100ms linear
-      font-weight: bold
+      // font-weight: bold
   
   .nav__list-item
     display: inline-block
@@ -415,3 +419,12 @@ section
 
   .icon-menu
     display: none
+
+
+// =========
+// PARTICLES
+// =========
+
+canvas
+  position: absolute
+  top: 0
