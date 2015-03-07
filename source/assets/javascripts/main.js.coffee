@@ -7,7 +7,7 @@ $nav_header = $('.banner')
 $navicon = $('[data-navicon="button"]')
 header_height = $('.banner').height()
 hero_height = $('.hero').height()
-offset_val = hero_height - header_height - 3
+offset_val = hero_height - header_height
 eventType = if document.ontouchstart != null then 'click' else 'touchstart'
 
 
@@ -42,22 +42,25 @@ openNav = ->
     $navicon.removeClass('is--closed')
   return
 
-anchorScroll = (event) ->
-  id = $(@).attr('href')
-  offset = header_height
-  target = $(id).offset().top - offset
+# --------------------------------------
+# THIS SCROLLING DOESN'T WORK IN FIREFOX
+# --------------------------------------
+# anchorScroll = (event) ->
+#   id = $(@).attr('href')
+#   offset = header_height
+#   target = $(id).offset().top - offset
 
-  $('body').animate({ scrollTop: target }, 700)
-  event.preventDefault() 
-  return
+#   $('body, html').animate({ scrollTop: target }, 700)
+#   event.preventDefault() 
+#   return
 
 
 # ========
 # HANDLERS
 # ========
 
-$('.scrollto').on eventType, ->
-  anchorScroll.call(@, event)
+# $('.scrollto').on eventType, ->
+#   anchorScroll.call(@, event)
 
 $navicon.on(eventType, menuToggle)
 
@@ -90,4 +93,3 @@ $(window).on 'scroll', ->
 $('#particles-js').on 'mouseenter', ->
   nav.find('a').removeClass 'active'
   sections.removeClass 'active'
-

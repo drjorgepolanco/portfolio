@@ -4,12 +4,12 @@ $(document).ready ->
       color: "#666"
       shape: "circle"
       opacity: 1
-      size: 2.5
+      size: 3
       size_random: true
       nb: 100
       line_linked:
         enable_auto: true
-        distance: 250
+        distance: 300
         color: "#FF3300"
         opacity: 1
         width: 0.2
@@ -19,11 +19,11 @@ $(document).ready ->
           rotateY: 600
       anim:
         enable: true
-        speed: 5
+        speed: 7
     interactivity:
       enable: true
       mouse:
-        distance: 200
+        distance: 300
       mode: "grab"
     retina_detect: true
 

@@ -10,11 +10,12 @@
 
 %main.sections
 
-  %section#about{:role => "main"}
-    .grid
+  %section#about
+    .grid.c
       %h2 
-        About
-      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,      |
+        %a#text{:href => "#"}
+          About
+      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,    |
       recusandae, at, labore velit eligendi amet nobis repellat natus sequi      |
       sint consectetur excepturi doloribus vero provident consequuntur           |
       accusamus quisquam nesciunt cupiditate soluta alias illo et deleniti       |
@@ -38,13 +39,14 @@
       vitae quidem consequatur deleniti recusandae odit officiis. Quidem,        | 
       cupiditate.                                                                |
 
-  .img-holder{"data-image" => "assets/images/bg-birds-3.jpg", 
-              "data-image-mobile" => "assets/images/bg-birds-3.jpg"}
+  .img-holder{"data-image" => "assets/images/jorge_mckinney.png", 
+              "data-image-mobile" => "assets/images/jorge_mckinney.png"}
 
   %section#services
-    .grid
-      %h2 
-        Services
+    .grid.c
+      %h2
+        %a#text{:href => "#"} 
+          Services
       %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,      |
       recusandae, at, labore velit eligendi amet nobis repellat natus sequi      |
       sint consectetur excepturi doloribus vero provident consequuntur           |
@@ -73,8 +75,10 @@
               "data-image-mobile" => "assets/images/bg-salinas-salt.jpg"}
 
   %section#skills
-    .grid
-      %h2 Skills
+    .grid.c
+      %h2
+        %a#text{:href => "#"}
+          Skills
       %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,      |
       recusandae, at, labore velit eligendi amet nobis repellat natus sequi      |
       sint consectetur excepturi doloribus vero provident consequuntur           |
@@ -103,8 +107,10 @@
               "data-image-mobile" => "assets/images/bg-in-hawk.jpg"}
 
   %section#contact
-    .grid
-      %h2 Contact
+    .grid.c
+      %h2
+        %a#text{:href => "#"}
+          Contact
       %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,      |
       recusandae, at, labore velit eligendi amet nobis repellat natus sequi      |
       sint consectetur excepturi doloribus vero provident consequuntur           |
