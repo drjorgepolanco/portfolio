@@ -13,21 +13,28 @@
     %nav{:role => "navigation"}
       %ul.nav__list
         %li.nav__list-item
+          %i.fa.fa-file-pdf-o
+          %a.scrollto{:href => "#"}  
+            Resume
+
+        %li.nav__list-item
           %i.fa.fa-child
-          %a.scrollto.chaffle{:href => "#about", "data-lang" => "en"} 
+          %a.scrollto{:href => "#about"} 
             About
+          / %a.scrollto.chaffle{:href => "#about", "data-lang" => "en"} 
+          /   About
 
         %li.nav__list-item
           %i.fa.fa-wrench
-          %a.scrollto.chaffle{:href => "#services", "data-lang" => "en"} 
+          %a.scrollto{:href => "#services"} 
             Services
 
         %li.nav__list-item
           %i.fa.fa-cogs
-          %a.scrollto.chaffle{:href => "#skills", "data-lang" => "en"}  
+          %a.scrollto{:href => "#skills"}  
             Skills
 
         %li.nav__list-item
           %i.fa.fa-envelope
-          %a.scrollto.chaffle{:href => "#contact", "data-lang" => "en"}  
+          %a.scrollto{:href => "#contact"}  
             Contact

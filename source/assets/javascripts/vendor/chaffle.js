@@ -3,8 +3,8 @@
   var methods = {    
     init: function(options){
       options = $.extend({
-        speed: 20, //シャッフルスピード
-        time: 140 //一文字をシャッフルする時間
+        speed: 20, 
+        time: 140
       }, options);
       return this.each(function(){
         var _this = this;
@@ -19,31 +19,22 @@
         }
 
         var $text = $this.text();
-        var substitution;　//代入テキスト
+        var substitution;
         var shuffle_timer;
         var shuffle_timer_delay;
         
-        //ランダムにテキストを代入
         var shuffle = function(){
           $this.text(substitution);
-          //$text.length = オリジナルテキストの文字数
-          //substitution.length = 現在の文字数（ループカウント）
-          //オリジナルの文字数までシャッフルをループさせる
-          //thisがシャッフル中かどうか文字数で判定
           if ($text.length - substitution.length > 0) { 
-            //thisにオリジナルの文字数があればその文字数までループ
             for (i = 0; i < $text.length - substitution.length; i++) {
-              //ランダムな文字を代入
               var shuffleStr = random_text.call();
               $this.append(shuffleStr);
             }
           } else {
-            //シャッフル中場合などそれ以外は止める
             clearInterval(shuffle_timer);
           }          
         }
         
-        //1文字遅れてオリジナルのテキストを入れていく。
         var shuffle_delay = function(){
           if (substitution.length < $text.length) {
             substitution = $text.substr(0, substitution.length + 1);
@@ -52,7 +43,6 @@
           }        
         }
         
-        //ランダムに文字を取得
         var random_text = function(){
           var str;
           var lang = $this.data('lang');
@@ -78,7 +68,6 @@
           clearInterval(shuffle_timer);
           clearInterval(shuffle_timer_delay);
           
-          //ランダムテキストダイマー
           shuffle_timer = setInterval(function(){
             shuffle.call(_this);
           }, options.speed);

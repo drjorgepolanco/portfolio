@@ -2,9 +2,8 @@
 # Chaffle
 # =======
 
-
-$(document).ready ->
-  $('.chaffle').chaffle {speed: 20, time: 1}
+# $(document).ready ->
+#   $('.chaffle').chaffle {speed: 20, time: 1}
 
 
 

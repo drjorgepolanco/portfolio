@@ -2,7 +2,13 @@
   = partial "layouts/header"
   #hero.hero
     %h1.hero__title Dr Jorge Polanco
-    %p.hero__tagline Full Stack Web Developer
+    %p.title-animation.hero__tagline.cd-headline.letters.type
+      %span.cd-words-wrapper.waiting
+        %b.hero__tagline.is-visible Full Stack Web Developer
+        %b JavaScript
+        %b jQuery
+        %b Ruby on Rails
+
     .mouse{"aria-hidden" => "true"}
       %span.mouse__wheel
       %img{:alt => "the trademark of apple inc.", 
@@ -10,12 +16,12 @@
 
 %main.sections
 
-  %section#about
+  %section#about.section
     .grid.c
       %h2 
         %a#text{:href => "#"}
           About
-      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,    |
+      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,      |
       recusandae, at, labore velit eligendi amet nobis repellat natus sequi      |
       sint consectetur excepturi doloribus vero provident consequuntur           |
       accusamus quisquam nesciunt cupiditate soluta alias illo et deleniti       |
@@ -39,10 +45,10 @@
       vitae quidem consequatur deleniti recusandae odit officiis. Quidem,        | 
       cupiditate.                                                                |
 
-  .img-holder{"data-image" => "assets/images/jorge_mckinney.png", 
-              "data-image-mobile" => "assets/images/jorge_mckinney.png"}
+  .img-holder{"data-image" => "assets/images/jorge_mckinney_2.png", 
+              "data-image-mobile" => "assets/images/jorge_mckinney_2.png"}
 
-  %section#services
+  %section#services.section
     .grid.c
       %h2
         %a#text{:href => "#"} 
@@ -74,7 +80,7 @@
   .img-holder{"data-image" => "assets/images/bg-salinas-salt.jpg", 
               "data-image-mobile" => "assets/images/bg-salinas-salt.jpg"}
 
-  %section#skills
+  %section#skills.section
     .grid.c
       %h2
         %a#text{:href => "#"}
@@ -106,7 +112,7 @@
   .img-holder{"data-image" => "assets/images/bg-in-hawk.jpg", 
               "data-image-mobile" => "assets/images/bg-in-hawk.jpg"}
 
-  %section#contact
+  %section#contact.section
     .grid.c
       %h2
         %a#text{:href => "#"}
