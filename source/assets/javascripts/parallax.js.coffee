@@ -3,4 +3,4 @@ $('.img-holder').imageScroll
   imageAttribute: if touch == true then 'image-mobile' else 'image'
   touch: touch
   
-# $('.img-holder').imageScroll();
+# $('.img-holder').imageScroll
