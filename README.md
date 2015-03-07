@@ -14,7 +14,6 @@ Proteus is built on top of [Middleman](https://middlemanapp.com/).
 * [Bourbon](http://bourbon.io)
 * [Neat](http://neat.bourbon.io)
 * [Middleman Live Reload](https://github.com/middleman/middleman-livereload)
-* [Middleman Deploy](https://github.com/karlfreeman/middleman-deploy)
 
 ### JavaScript libraries:
 
