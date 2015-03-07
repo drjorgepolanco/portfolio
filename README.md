@@ -24,6 +24,3 @@ Proteus is built on top of [Middleman](https://middlemanapp.com/).
 * [Chaffle](https://github.com/blivesta/chaffle)
 * [CharCycle](http://robincwillis.github.io/CharCycle/)
 * [Parallax ImageScroll](https://github.com/pederan/Parallax-ImageScroll)
-* [Neat](http://neat.bourbon.io)
-* [Middleman Live Reload](https://github.com/middleman/middleman-livereload)
-* [Middleman Deploy](https://github.com/karlfreeman/middleman-deploy)
