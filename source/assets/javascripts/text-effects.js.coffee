@@ -13,4 +13,4 @@
 
 $('.c').mouseenter ->
   if $(@).hasClass('cycling') == false
-    $(@).charcycle {'target':'#text'}
+    $(@).charcycle {'target':'.text'}

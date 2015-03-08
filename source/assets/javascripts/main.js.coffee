@@ -1,4 +1,4 @@
-# ======
+# ==============================================================================
 # CONFIG
 # ======
 
@@ -11,7 +11,7 @@ offset_val = hero_height - header_height
 eventType = if document.ontouchstart != null then 'click' else 'touchstart'
 
 
-# =========
+# ==============================================================================
 # FUNCTIONS
 # =========
 
@@ -55,12 +55,9 @@ openNav = ->
 #   return
 
 
-# ========
+# ==============================================================================
 # HANDLERS
 # ========
-
-# $('.scrollto').on eventType, ->
-#   anchorScroll.call(@, event)
 
 $navicon.on(eventType, menuToggle)
 
@@ -68,28 +65,31 @@ $('.banner a').on(eventType, openNav)
 
 $(window).scroll(navSlide)
 
+# $('.scrollto').on eventType, ->
+#   anchorScroll.call(@, event)
 
-# ================
+
+# ==============================================================================
 # NAV ACTIVE STATE
 # ================
 
-sections = $('section')
-nav = $('nav')
-nav_height = nav.outerHeight()
-$(window).on 'scroll', ->
-  cur_pos = $(@).scrollTop()
-  sections.each ->
-    top = $(@).offset().top - nav_height
-    bottom = top + $(@).outerHeight()
+# sections = $('section')
+# nav = $('nav')
+# nav_height = nav.outerHeight()
+# $(window).on 'scroll', ->
+#   cur_pos = $(@).scrollTop()
+#   sections.each ->
+#     top = $(@).offset().top - nav_height
+#     bottom = top + $(@).outerHeight()
 
-    if cur_pos >= top and cur_pos <= bottom
-      nav.find('a').removeClass 'active'
-      sections.removeClass 'active'
-      $(@).addClass 'active'
-      nav.find('a[href="#' + $(@).attr('id') + '"]').addClass 'active'
-    return
-  return
+#     if cur_pos >= top and cur_pos <= bottom
+#       nav.find('a').removeClass 'active'
+#       sections.removeClass 'active'
+#       $(@).addClass 'active'
+#       nav.find('a[href="#' + $(@).attr('id') + '"]').addClass 'active'
+#     return
+#   return
 
-$('#particles-js').on 'mouseenter', ->
-  nav.find('a').removeClass 'active'
-  sections.removeClass 'active'
+# $('#particles-js').on 'mouseenter', ->
+#   nav.find('a').removeClass 'active'
+#   sections.removeClass 'active'

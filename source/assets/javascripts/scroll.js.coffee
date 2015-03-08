@@ -31,5 +31,5 @@ $(document).ready ->
         targetOffset = $target.offset().top
         $(@).click (event) ->
           event.preventDefault()
-          $(scrollElem).animate {scrollTop: targetOffset}, 500, ->
+          $(scrollElem).animate {scrollTop: targetOffset}, 700, ->
             location.hash = target
