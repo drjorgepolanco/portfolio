@@ -1,0 +1,15 @@
+.about
+  @include outer-container
+  padding: 2em 0 3em 0
+  .info
+    @include span-columns(12)
+    text-align: center
+    padding: 1em 0 1em 0
+
+@media only screen and (min-width: 766px)
+  .about
+    @include outer-container
+    padding: 2em 0 2.5em 0
+    .info
+      @include span-columns(4)
+      text-align: center

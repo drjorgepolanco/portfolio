@@ -1,191 +1,24 @@
-#particles-js
-  = partial "layouts/header"
-  #hero.hero
-    %h1.hero__title Dr Jorge Polanco
-    %p.title-animation.hero__tagline.cd-headline.letters.type
-      %span.cd-words-wrapper.waiting
-        %b.hero__tagline.is-visible Full Stack Web Developer
-        %b JavaScript
-        %b Solid, cutting-edge fundamentals
-        %b jQuery
-        %b Web Design & UX
-        %b Ruby on Rails
+= partial "hero"
 
-    .mouse{"aria-hidden" => "true"}
-      %span.mouse__wheel
-      %img{:alt => "the trademark of apple inc.", 
-           :src => "//s3-us-west-2.amazonaws.com/s.cdpn.io/392/Apple_logo_black.svg.png"}
-
-%main.sections
+%main
   %section#about.section
-    .grid
-      .c
-        %h2 
-          %a.text{:href => "#"}
-            Who I am
-        .sub-header-container
-          %h4.sub-header
-            Open Communication
-            %br/
-            Clear Goals
-            %br/
-            Solid Commitment
-      
-      #about-me
-        .about-me
-          %i.fa.fa-flag.fa-5x
-          %h4 Dominican
-        .about-me
-          %i.fa.fa-briefcase.fa-5x
-          %h4 Freelancer
-        .about-me
-          %i.fa.fa-globe.fa-5x
-          %h4 English / Spanish / German
-
-      %hr/
-
-      #who-am-i
-        .who-am-i
-          %h3 Who I am
-          %i.fa.fa-child.fa-5x
-          %p Learner, Polyglot, Fond of Animals
-        .who-am-i
-          %h3 What I do
-          %i.fa.fa-laptop.fa-5x
-          %p Contribute to shape the web
-        .who-am-i
-          %h3 How I work
-          %i.fa.fa-magic.fa-5x
-          %p Dedicated, focused, results oriented
+    = partial "about"
   
-  %section#services
-    .img-holder{"data-image" => "assets/images/photos/jorge_mckinney_2.png", 
-              "data-image-mobile" => "assets/images/photos/jorge_mckinney_2.png"}
-      .grid
-        .img-text
-          %h2 Get it done
-          .sub-header-container
-            %h4.sub-header
-              In a world filled with
-              %br/ 
-              great unimplemented ideas.
-              %br/ 
-              Something must be wrong. 
-          #what-i-do
-            .what-i-do
-              %i.fa.fa-flask.fa-5x
-              %h2 Discover
-              %h3 Research
-            .what-i-do
-              %i.fa.fa-tint.fa-5x
-              %h2 Design
-              %h3 Prototype
-            .what-i-do
-              %i.fa.fa-code.fa-5x
-              %h2 Develop
-              %h3 Implement
-            .what-i-do
-              %i.fa.fa-rocket.fa-5x
-              %h2 Launch         
-              %h3 Iterate
-
-  / %section#services.section
-  /   .grid.c
-  /     %h2
-  /       %a.text{:href => "#"} 
-  /         Services
-  /     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,      |
-  /     recusandae, at, labore velit eligendi amet nobis repellat natus sequi      |
-  /     sint consectetur excepturi doloribus vero provident consequuntur           |
-  /     accusamus quisquam nesciunt cupiditate soluta alias illo et deleniti       |
-  /     voluptates facilis repudiandae similique dolore quaerat architecto         |
-  /     perspiciatis officiis dolor ullam expedita suscipit neque minima rem       |
-  /     praesentium inventore ab officia quos dignissimos esse quam placeat iste   |
-  /     porro eius! Minus, aspernatur nesciunt consectetur. Sit, eius, itaque,     | 
-  /     porro, beatae impedit officia tenetur reiciendis autem vitae a quae ipsam  |
-  /     repudiandae odio dolorum quaerat asperiores possimus corporis optio animi  |
-  /     quisquam laboriosam nihil quam voluptatum quidem veritatis iste culpa iure |
-  /     modi perspiciatis recusandae ipsa libero officiis aliquam doloremque       |
-  /     similique id quasi atque distinctio enim sapiente ratione in quia eum      |
-  /     perferendis earum blanditiis. Nobis, architecto, veniam molestias minus    |
-  /     iste necessitatibus est ab in earum ratione eveniet soluta molestiae sed   |
-  /     illo nostrum nemo debitis. Minus, quod totam aliquam ea asperiores fugit   |
-  /     quaerat excepturi dolores ratione numquam consequatur id unde alias        |
-  /     provident vero incidunt exercitationem similique consequuntur hic          |
-  /     possimus? Fuga, eveniet quaerat inventore corporis laborum eligendi enim   |
-  /     soluta obcaecati aliquid veritatis provident amet laudantium est quisquam  |
-  /     dolore exercitationem modi? Distinctio, pariatur, ab velit praesentium     |
-  /     vitae quidem consequatur deleniti recusandae odit officiis. Quidem,        | 
-  /     cupiditate.                                                                |
-
-  / .img-holder{"data-image" => "assets/images/photos/bg-salinas-salt.jpg", 
-  /             "data-image-mobile" => "assets/images/photos/bg-salinas-salt.jpg"}
+  %section#services.section
+    = partial "services"
 
   %section#skills.section
-    .grid.c
-      %h2
-        %a.text{:href => "#"}
-          Skills
-      .sub-header-container
-        %h4.sub-header
-          Object-Oriented Programming
-          %br/
-          Behavior & Test Driven Development
-          %br/
-          Responsive Web Design & UX
-      = partial "skills"
-      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,      |
-      recusandae, at, labore velit eligendi amet nobis repellat natus sequi      |
-      sint consectetur excepturi doloribus vero provident consequuntur           |
-      accusamus quisquam nesciunt cupiditate soluta alias illo et deleniti       |
-      voluptates facilis repudiandae similique dolore quaerat architecto         |
-      perspiciatis officiis dolor ullam expedita suscipit neque minima rem       |
-      praesentium inventore ab officia quos dignissimos esse quam placeat iste   |
-      porro eius! Minus, aspernatur nesciunt consectetur. Sit, eius, itaque,     | 
-      porro, beatae impedit officia tenetur reiciendis autem vitae a quae ipsam  |
-      repudiandae odio dolorum quaerat asperiores possimus corporis optio animi  |
-      quisquam laboriosam nihil quam voluptatum quidem veritatis iste culpa iure |
-      modi perspiciatis recusandae ipsa libero officiis aliquam doloremque       |
-      similique id quasi atque distinctio enim sapiente ratione in quia eum      |
-      perferendis earum blanditiis. Nobis, architecto, veniam molestias minus    |
-      iste necessitatibus est ab in earum ratione eveniet soluta molestiae sed   |
-      illo nostrum nemo debitis. Minus, quod totam aliquam ea asperiores fugit   |
-      quaerat excepturi dolores ratione numquam consequatur id unde alias        |
-      provident vero incidunt exercitationem similique consequuntur hic          |
-      possimus? Fuga, eveniet quaerat inventore corporis laborum eligendi enim   |
-      soluta obcaecati aliquid veritatis provident amet laudantium est quisquam  |
-      dolore exercitationem modi? Distinctio, pariatur, ab velit praesentium     |
-      vitae quidem consequatur deleniti recusandae odit officiis. Quidem,        | 
-      cupiditate.                                                                |
+    = partial "skills"
 
-  .img-holder{"data-image" => "assets/images/photos/bg-in-hawk.jpg", 
-              "data-image-mobile" => "assets/images/photos/bg-in-hawk.jpg"}
+  %section#quote.section
+    / .img-holder{"data-image" => "assets/images/photos/bg-in-hawk.jpg", 
+    /             "data-image-mobile" => "assets/images/photos/bg-in-hawk.jpg"}
+  
+  %section#experience.section
+
+
+  %section#closing-image.section
+    / .img-holder{"data-image" => "assets/images/photos/bg-in-hawk.jpg", 
+    /             "data-image-mobile" => "assets/images/photos/bg-in-hawk.jpg"}
 
   %section#contact.section
-    .grid.c
-      %h2
-        %a.text{:href => "#"}
-          Contact
-      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,      |
-      recusandae, at, labore velit eligendi amet nobis repellat natus sequi      |
-      sint consectetur excepturi doloribus vero provident consequuntur           |
-      accusamus quisquam nesciunt cupiditate soluta alias illo et deleniti       |
-      voluptates facilis repudiandae similique dolore quaerat architecto         |
-      perspiciatis officiis dolor ullam expedita suscipit neque minima rem       |
-      praesentium inventore ab officia quos dignissimos esse quam placeat iste   |
-      porro eius! Minus, aspernatur nesciunt consectetur. Sit, eius, itaque,     | 
-      porro, beatae impedit officia tenetur reiciendis autem vitae a quae ipsam  |
-      repudiandae odio dolorum quaerat asperiores possimus corporis optio animi  |
-      quisquam laboriosam nihil quam voluptatum quidem veritatis iste culpa iure |
-      modi perspiciatis recusandae ipsa libero officiis aliquam doloremque       |
-      similique id quasi atque distinctio enim sapiente ratione in quia eum      |
-      perferendis earum blanditiis. Nobis, architecto, veniam molestias minus    |
-      iste necessitatibus est ab in earum ratione eveniet soluta molestiae sed   |
-      illo nostrum nemo debitis. Minus, quod totam aliquam ea asperiores fugit   |
-      quaerat excepturi dolores ratione numquam consequatur id unde alias        |
-      provident vero incidunt exercitationem similique consequuntur hic          |
-      possimus? Fuga, eveniet quaerat inventore corporis laborum eligendi enim   |
-      soluta obcaecati aliquid veritatis provident amet laudantium est quisquam  |
-      dolore exercitationem modi? Distinctio, pariatur, ab velit praesentium     |
-      vitae quidem consequatur deleniti recusandae odit officiis. Quidem,        | 
-      cupiditate.                                                                |

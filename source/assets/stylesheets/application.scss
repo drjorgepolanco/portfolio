@@ -10,7 +10,12 @@
 
 
 // CUSTOM
+@import "variables";
 @import "main";
+@import "progress-circle";
+@import "about";
+@import "services";
+@import "skills";
 @font-face {
   font-family: "Play";
   src: url(../fonts/Play-Regular.ttf);

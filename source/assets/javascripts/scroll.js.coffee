@@ -1,3 +1,5 @@
+'use strict'
+
 $(document).ready ->
   filterPath = (string) ->
     string.replace(/^\//, '').replace(/(index|default).[a-zA-Z]{3,4}$/, '').replace(/\/$/, '')

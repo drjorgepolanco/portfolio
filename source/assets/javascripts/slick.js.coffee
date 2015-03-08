@@ -1,7 +1,9 @@
+'use strict'
+
 $(document).ready ->
   $('.responsive').slick
     infinite: true
-    speed: 300
+    speed: 600
     autoplay: true
     centerMode: true
     centerPadding: 60

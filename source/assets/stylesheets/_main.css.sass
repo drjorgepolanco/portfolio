@@ -1,23 +1,4 @@
-// =============================================================================
-// VARIABLES
-// =========
-
-// Sizes
-$tiny: 0.14286rem
-$tiny-2x: 0.28571rem
-
-// Colors
-$white: #fff
-$x-light-gray: #ccc
-$dark-gray: #333
-$medium-gray: #666
-$nav-bg: rgba(255, 255, 255, 0.93)
-
-// Fonts
-$play: "Play", sans-serif
-$goudy: "Sorts Mill Goudy", serif
-$helvetica: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif
-
+@import "variables"
 
 // =============================================================================
 // PLACEHOLDERS
@@ -69,14 +50,6 @@ $helvetica: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif
   -webkit-transform: translate#{$axis}($dimension)
   transform: translate#{$axis}($dimension)
 
-=sub-section-icons($class)
-  @include outer-container
-  text-align: center
-  padding: 2em 0 3em 0
-  .#{$class}
-    padding: 1em 0 1em 0
-    @include span-columns(12)
-
 
 // =============================================================================
 // TYPOGRAPHY AND MAIN LAYOUT
@@ -122,16 +95,23 @@ p
   font-size: 1em
   line-height: 2
 
+.header
+  @include outer-container
+  padding-top: 56px
+  color: $white
+  position: relative
+
 .sub-header-container
   overflow: hidden
   text-align: center
+  color: $white
   .sub-header
     display: inline-block
     padding: 0 15px
     position: relative
     &:before,
     &:after
-      background: $white
+      background: $light
       content: ""
       display: block
       height: 2px
@@ -376,55 +356,14 @@ nav
     +webkit-transform(Y, 14px)
 
 .section
-  padding-top: 56px
   &:nth-child(odd)
-    background: #333
+    background: $dark-gray
     color: $x-light-gray
     text-align: justify
   &:nth-child(even)
     background: $x-light-gray
-    color: #333
+    color: $dark-gray
     text-align: justify
-
-
-// ------------
-// ABOUT Mobile
-// ------------
-
-#about-me
-  +sub-section-icons(about-me)
-
-#who-am-i
-  +sub-section-icons(who-am-i)
-
-.image-holder
-  width: 100%
-  height: 100%
-  margin: 0
-  padding: 0
-
-.img-text
-  height: 600px
-  width: auto
-  color: $white
-  position: absolute
-  left: 0
-  right: 0
-  top: 0
-  bottom: 0
-  margin: auto
-  max-width: 100%
-  max-height: 100%
-  overflow: auto
-
-#what-i-do
-  @include outer-container
-  text-align: center
-  padding-top: 2em
-  .what-i-do
-    padding: 1em 0 1em 0
-    @include span-columns(12)
-
 
 
 // =============================================================================
@@ -440,11 +379,6 @@ nav
     -webkit-align-items: center
     -ms-flex-align: center
     align-items: center
-
-  %sub-section-icons
-    @include outer-container
-    text-align: center
-    padding: 2em 0 3em 0
   
   .banner
     height: auto
@@ -481,48 +415,6 @@ nav
     display: none
 
 
-  // -------------
-  // ABOUT Desktop
-  // -------------
-
-  #about-me
-    @extend %sub-section-icons
-    .about-me
-      @include span-columns(4)
-
-  #who-am-i
-    @extend %sub-section-icons
-    .who-am-i
-      @include span-columns(4)
-  
-  .image-holder
-    width: 100%
-    height: 100%
-    margin: 0
-    padding: 0
-
-  .img-text
-    height: 500px
-    width: 100%
-    color: $white
-    position: absolute
-    left: 0
-    right: 0
-    top: 0
-    bottom: 0
-    margin: auto
-    max-width: 100%
-    max-height: 100%
-    overflow: auto
-
-  #what-i-do
-    @include outer-container
-    text-align: center
-    padding-top: 3em
-    .what-i-do
-      @include span-columns(3)
-
-
 // =============================================================================
 // PARTICLES
 // =========
@@ -538,23 +430,3 @@ canvas
 
 .title-animation
   font-size: 1em !important
-
-
-// =============================================================================
-// SLICK
-// =====
-
-.slick-slide
-  padding-top: 1em
-  img
-    display: block
-    background: #fff
-    padding: 20px
-    height: 220px
-    margin: 0 auto
-    opacity: 1
-    &:hover
-      opacity: 0.6
-      transition: 0.2s
-  h4
-    text-align: center
