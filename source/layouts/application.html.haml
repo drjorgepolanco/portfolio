@@ -6,25 +6,26 @@
           http: {equiv: "X-UA-Compatible"}}
     %meta{name: "viewport", 
           content: "width=device-width, initial-scale=1"}
-    %link{:rel => "stylesheet", 
-          :href => "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"}/
     %title= current_page.data.title || "Dr. Jorge Polanco"
     = stylesheet_link_tag "application"
 
   %body{class: page_classes}
     = yield
-    = javascript_include_tag "vendor/jquery"
-    = javascript_include_tag "vendor/imageScroll"
-    = javascript_include_tag "vendor/modernizr"
+    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+    = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+    = javascript_include_tag "vendor/imageScroll.min"
     = javascript_include_tag "vendor/slick"
     = javascript_include_tag "vendor/particles"
     = javascript_include_tag "vendor/animated-headline"
     = javascript_include_tag "vendor/charcycle"
     / = javascript_include_tag "vendor/chaffle"
-    = javascript_include_tag "slick"
-    = javascript_include_tag "progress-circle"
-    = javascript_include_tag "text-effects"
-    = javascript_include_tag "particles"
+
+    / Consolidate libraries in libraries.js to improve Perfomance
+    / = javascript_include_tag "slick"
+    / = javascript_include_tag "progress-circle"
+    / = javascript_include_tag "text-effects"
+    / = javascript_include_tag "particles"
+    = javascript_include_tag "libraries"
     = javascript_include_tag "scroll"
     = javascript_include_tag "main"
     = javascript_include_tag "parallax"

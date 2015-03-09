@@ -1,0 +1,40 @@
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType assets/images/logos "access plus 1 year"
+ExpiresByType assets/images/photos "access plus 1 year"
+ExpiresByType assets/javascripts "access plus 1 year"
+ExpiresByType assets/javascripts/vendor "access plus 1 year"
+ExpiresByType assets/stylesheets "access plus 1 year"
+ExpiresByType assets/stylesheets/vendor "access plus 1 year"
+ExpiresDefault "access plus 2 days"
+</IfModule>
+## EXPIRES CACHING ##
+
+<IfModule mod_deflate.c>
+  # Compress HTML, CSS, JavaScript, Text, XML and fonts
+  AddOutputFilterByType DEFLATE assets/images/logos
+  AddOutputFilterByType DEFLATE assets/javascripts
+  AddOutputFilterByType DEFLATE assets/javascripts/vendor/
+  AddOutputFilterByType DEFLATE assets/stylesheets
+  AddOutputFilterByType DEFLATE assets/stylesheets/vendor/
+
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+
+  # Remove browser bugs (only needed for really old browsers)
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  Header append Vary User-Agent
+</IfModule>
+
+<IfModule mod_headers.c>
+# YEAR
+<FilesMatch "\.(jpg|jpeg|png|gif|swf|js|css)$">
+    Header set Cache-Control "max-age=31449600, public"
+</FilesMatch>

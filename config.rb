@@ -16,7 +16,16 @@ end
 
 configure :build do
   # Relative assets needed to deploy to Github Pages
-  activate :relative_assets
+  # activate :relative_assets
+  activate :minify_css
+  activate :minify_javascript
+  activate :gzip
+  activate :minify_html
+  activate :asset_hash
+end
+
+activate :imageoptim do |options|
+  options.image_extensions = %w(.png .jpg)
 end
 
 activate :deploy do |deploy|
