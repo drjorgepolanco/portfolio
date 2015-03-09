@@ -1,10 +1,6 @@
 %header.banner{:role => "banner"}
-  .grid.my-logo
-    = link_to image_tag('heroica/heroica.gif'), 
-                        '#hero', 
-                        :class => "logo scrollto", 
-                        :rel => "bookmark" 
-
+  .grid
+    %a.icon-heroica.logo.scrollto{:href => "#hero", :rel => "bookmark"}
     %button.icon-menu.navicon.navicon-x{"aria-label" => "Toggle Navigation", 
                                         "data-navicon" => "button", 
                                         :role => "button", :type => "button"}
@@ -12,29 +8,32 @@
 
     %nav{:role => "navigation"}
       %ul.nav__list
-        %li.nav__list-item
+        %button.nav__list-item
           %i.fa.fa-file-pdf-o
-          %a.scrollto{:href => "#"}  
+          %a.scrollto{:href => "jorge_polanco_resume.pdf", :target => "_blank"}  
             Resume
 
-        %li.nav__list-item
+        %button.nav__list-item
           %i.fa.fa-child
           %a.scrollto{:href => "#about"} 
             About
 
-        %li.nav__list-item
+        %button.nav__list-item
           %i.fa.fa-wrench
           %a.scrollto{:href => "#services"} 
             Services
 
-        %li.nav__list-item
+        %button.nav__list-item
           %i.fa.fa-cogs
           %a.scrollto{:href => "#skills"}  
             Skills
 
-        %li.nav__list-item
+        %button.nav__list-item
+          %i.fa.fa-briefcase
+          %a.scrollto{:href => "#experience"}  
+            Experience
+
+        %button.nav__list-item
           %i.fa.fa-envelope
           %a.scrollto{:href => "#contact"}  
             Contact
-          / %a.scrollto.chaffle{:href => "#contact", "data-lang" => "en"} 
-          /   Contact

@@ -95,3 +95,6 @@ $(window).scroll(navSlide)
 # $('#particles-js').on 'mouseenter', ->
 #   nav.find('a').removeClass 'active'
 #   sections.removeClass 'active'
+
+
+$(".contentContainer").css('min-height', $(window).height())

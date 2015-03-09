@@ -1,24 +1,39 @@
 = partial "hero"
 
 %main
-  %section#about.section
+  %section#about.section.contentContainer
     = partial "about"
   
   %section#services.section
     = partial "services"
 
-  %section#skills.section
+  %section#skills.section.contentContainer
     = partial "skills"
 
   %section#quote.section
+    .img-holder{"data-image" => "assets/images/photos/coding.jpg", 
+                "data-image-mobile" => "assets/images/photos/coding.jpg"}
+  
+  %section#experience.section.contentContainer
+    .header.c
+      %h2
+        %a.text{:href => "#"}
+          UNDER CONSTRUCTION
+    .sub-header-container
+      %h4.sub-header
+        Strong Fundamentals
+    
+  %section#closing-image.section
     .img-holder{"data-image" => "assets/images/photos/in-hawk.jpg", 
                 "data-image-mobile" => "assets/images/photos/in-hawk.jpg"}
-  
-  %section#experience.section
 
-
-  %section#closing-image.section
-    / .img-holder{"data-image" => "assets/images/photos/bg-in-hawk.jpg", 
-    /             "data-image-mobile" => "assets/images/photos/bg-in-hawk.jpg"}
-
-  %section#contact.section
+  %section#contact.section.contentContainer
+    .header.c
+      %h2
+        %a.text{:href => "#"}
+          UNDER CONSTRUCTION
+    .sub-header-container
+      %h4.sub-header
+        It's always good
+        %br/
+        to get in touch.
