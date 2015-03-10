@@ -1,5 +1,21 @@
 'use strict'
 
+
+# ==============================================================================
+# PORTFOLIO
+# =========
+
+$(document).ready ->
+  $('.project-button').on 'click', '.more', (event) ->
+    event.preventDefault()
+    $(@).parent().parent().find('.project-info').show()
+    return
+  $('.cancel').on 'click', (event) ->
+    event.preventDefault()
+    $(@).parent().hide()
+    return
+  return
+
 # ==============================================================================
 # EXPERIENCE
 # ==========
@@ -104,9 +120,10 @@ $(document).ready ->
 # CharCycle
 # =========
 
-$('.c').mouseenter ->
-  if $(@).hasClass('cycling') == false
-    $(@).charcycle {'target':'.text'}
+$(document).ready ->
+  $('.c').mouseenter ->
+    if $(@).hasClass('cycling') == false
+      $(@).charcycle {'target':'.text'}
 
 
 # ==============================================================================
@@ -149,3 +166,4 @@ canvas.css("height", h)
 c = document.querySelector("canvas")
 $('div#particles-js canvas').css("height", h)
 return
+

@@ -429,7 +429,7 @@ nav
         line-height: 2
         list-style: none
         display: inline
-        margin-left: 35px
+        margin-left: 16px
         margin-top: 0
 
   .icon-heroica
@@ -837,7 +837,7 @@ canvas
 .work
   @include span-columns(12)
   margin: 2em 0 2em 0
-  .work-logo
+  .work-image
     @include outer-container
     img
       height: 100%
@@ -866,12 +866,12 @@ canvas
   .work
     @include outer-container
     &:nth-child(odd)
-      .work-logo
+      .work-image
         @include span-columns(6)
       .work-info
         @include span-columns(6)
     &:nth-child(even)
-      .work-logo
+      .work-image
         @include span-columns(6)
         @include shift(6)
       .work-info
@@ -913,3 +913,64 @@ canvas
     text-align: center
     color: $white
 
+
+// =============================================================================
+// PORTFOLIO
+// =========
+
+#project
+  @include outer-container
+  -webkit-transition: all .2s
+  transition: all .2s
+  padding: 1em 1em 30px 1em
+
+.project
+  @include outer-container
+  margin: 2em 0 2em 0
+  border: 1px solid $light
+  position: relative
+  .project-image
+    @include outer-container
+    img
+      height: 100%
+      width: 100%
+  .project-button
+    @include outer-container
+    padding: 2em
+    h3
+      float: left
+      margin: 8px 0 0 0
+    a
+      float: right
+      margin: 0
+      background: $light
+      color: $dark-gray
+      padding: 14px 10px 10px 10px
+      width: 30%
+      text-align: center
+      font-weight: bold
+      transition: all .2s
+      border: 1px solid $dark-gray
+      &:hover
+
+        color: $light
+        background: $dark-gray
+        border: 1px solid $light
+  .project-info
+    display: none
+    top: 0
+    position: absolute
+    width: 100%
+    height: 100%
+    background: rgba(23, 30, 34, 0.9)
+    padding: 24px
+    h4
+      text-align: center
+    .cancel
+      float: right
+      cursor: pointer
+      bottom: 10
+    .repo
+      float: left
+    .live
+      float: right
