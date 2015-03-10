@@ -830,8 +830,6 @@ canvas
 
 #work
   @include outer-container
-  -webkit-transition: all .2s
-  transition: all .2s
   padding: 1em 0 30px 0
 
 .work
@@ -859,8 +857,6 @@ canvas
 @media only screen and (min-width: 766px)
   #work
     @include outer-container
-    -webkit-transition: all .2s
-    transition: all .2s
     padding: 1em 0 3em 0
 
   .work
@@ -920,15 +916,15 @@ canvas
 
 #project
   @include outer-container
-  -webkit-transition: all .2s
-  transition: all .2s
+
   padding: 1em 1em 30px 1em
 
 .project
   @include outer-container
   margin: 2em 0 2em 0
-  border: 1px solid $light
+  // border: 1px solid $light
   position: relative
+  background: #222
   .project-image
     @include outer-container
     img
@@ -944,17 +940,17 @@ canvas
       float: right
       margin: 0
       background: $light
-      color: $dark-gray
+      color: #222
       padding: 14px 10px 10px 10px
       width: 30%
       text-align: center
       font-weight: bold
+      -webkit-transition: all .2s
       transition: all .2s
       border: 1px solid $dark-gray
       &:hover
-
         color: $light
-        background: $dark-gray
+        background: #222
         border: 1px solid $light
   .project-info
     display: none
@@ -962,9 +958,9 @@ canvas
     position: absolute
     width: 100%
     height: 100%
-    background: rgba(23, 30, 34, 0.9)
+    background: rgba(23, 30, 34, 0.95)
     padding: 24px
-    h4
+    h4, p
       text-align: center
     .cancel
       float: right
@@ -974,3 +970,16 @@ canvas
       float: left
     .live
       float: right
+
+@media only screen and (min-width: 766px)
+
+  #project
+    @include outer-container
+
+    .project
+      @include span-columns(4)
+      @include omega(3n)
+      .project-image
+        transition: all .2s ease-in-out
+        &:hover
+          transform: scale(1.7)

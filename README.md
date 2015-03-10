@@ -2,21 +2,19 @@
 
 ## My Portfolio
 
-This project has been built using latest front-end technologies on top of [Proteus](http://github.com/thoughtbot/proteus), which follows the [thoughtbot styleguide](https://github.com/thoughtbot/guides).
+This project has been built using latest front-end technologies on top of [Proteus](http://github.com/thoughtbot/proteus) - [Middleman](https://middlemanapp.com/).
 
-Proteus is built on top of [Middleman](https://middlemanapp.com/).
+###Technologies:
 
-### The main tecnologies chosen for this project include:
-
-* [HAML](http://haml.info)
 * [Coffeescript](http://coffeescript.org)
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Sass](http://sass-lang.com)
+* [HAML](http://haml.info)
+
+
+###Libraries:
 * [Bourbon](http://bourbon.io)
 * [Neat](http://neat.bourbon.io)
-* [Middleman Live Reload](https://github.com/middleman/middleman-livereload)
-
-### JavaScript libraries:
-
 * [jQuery](http://jquery.com/)
 * [Modernizr](http://modernizr.com/)
 * [Animated Headlines](http://codyhouse.co/gem/css-animated-headlines/)
@@ -24,3 +22,6 @@ Proteus is built on top of [Middleman](https://middlemanapp.com/).
 * [Chaffle](https://github.com/blivesta/chaffle)
 * [CharCycle](http://robincwillis.github.io/CharCycle/)
 * [Parallax ImageScroll](https://github.com/pederan/Parallax-ImageScroll)
+* [Slick](https://github.com/kenwheeler/slick)
+* [Wow](https://github.com/matthieua/WOW)
+* [Animate](https://github.com/daneden/animate.css)
