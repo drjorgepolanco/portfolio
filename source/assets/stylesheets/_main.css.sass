@@ -131,6 +131,7 @@ p
     display: inline-block
     padding: 0 15px
     position: relative
+    line-height: 1.5
     &:before,
     &:after
       background: $light
@@ -827,122 +828,88 @@ canvas
 // EXPERIENCE
 // ==========
 
-.experience
+#work
   @include outer-container
   -webkit-transition: all .2s
   transition: all .2s
-  padding: 1em 0 3em 0
+  padding: 1em 0 30px 0
 
 .work
-  margin: 0 auto
-  padding: 0
-  list-style: none
-  max-width: 1200px
-  li
-    &:nth-of-type(even) figure
-      img
-        float: right
-      figcaption
-        float: left
-        > div
-          margin-right: 50px
-    &:nth-of-type(odd) figure
-      img
-        float: left
-      figcaption
-        float: right
-        > div
-          margin-left: 50px
-    &:not(:last-of-type)
-      margin-bottom: 10px
-      line-height: 1.5
-  figure
-    margin: 0
-    overflow: hidden
-    padding: 2em 0 2em 0
-
+  @include span-columns(12)
+  margin: 2em 0 2em 0
+  .work-logo
+    @include outer-container
     img
-      background: $white
-      display: block
-      width: 50%
-      padding: 10px
-      border-radius: 3px
-      border: 1px solid #f3f3f3
-    figcaption
-      .name
-        padding-bottom: 0
-      h3
-        margin: 0
-      h4
-        margin: 12px 0 12px 0
-      overflow: hidden
-      width: 50%
-      > div
-        padding: 12px 0
-        border-bottom: 1px solid #f3f3f3
-        &:first-of-type
-          padding-top: 0
-        &:last-of-type
-          padding-bottom: 0
-          border: none
-        .label
-          font-weight: 700
-          line-height: 1.5
-          &:after
-            content: ":"
-          display: inline-block
-        .value
-          line-height: 1.5
-        a.button
-          display: inline-block
-          text-decoration: none
-          padding: 15px 25px
-          color: #fff
-          border-radius: 4px
-          font-size: 1.2em
-          background: #13abdb -webkit-linear-gradient(90deg, #13abdb, #34c1ed)
-          background: #13abdb linear-gradient(0deg, #13abdb, #34c1ed)
-          -webkit-transition: all 0.1s linear
-          transition: all 0.1s linear
-          &:hover
-            background-image: none
-
-@media (max-width: 1280px)
-  .work
-    max-width: 1000px
-
-@media (max-width: 1080px)
-  .work
-    max-width: 800px
-
-@media (max-width: 880px)
-  .work
-    max-width: 100%
-
-
-
-
-footer
-  background: #444
-  color: #fcfcfc
-  padding: 50px
-  margin-top: 75px
-  .inner
-    max-width: 502px
-    text-align: center
-    margin: 0 auto
-    a
-      color: inherit
-      &.button
+      height: 100%
+      width: 100%
+  .work-info
+    @include outer-container
+    width: 90%
+    .info
+      border-bottom: 1px solid #f3f3f3
+      li
+        line-height: 1.5
+    .title
+      text-align: center
+    .date
+      > *
         display: inline-block
-        margin-top: 25px
-        padding: 15px 25px
-        border: 1px solid #fff
-        border-radius: 4px
-        font-size: 1.2em
-        text-decoration: none
-        -webkit-transition: all 0.1s linear
-        transition: all 0.1s linear
-        &:hover
-          background-color: #fff
-          color: #444
+
+
+@media only screen and (min-width: 766px)
+  #work
+    @include outer-container
+    -webkit-transition: all .2s
+    transition: all .2s
+    padding: 1em 0 3em 0
+
+  .work
+    @include outer-container
+    &:nth-child(odd)
+      .work-logo
+        @include span-columns(6)
+      .work-info
+        @include span-columns(6)
+    &:nth-child(even)
+      .work-logo
+        @include span-columns(6)
+        @include shift(6)
+      .work-info
+        @include span-columns(6)
+        @include shift(-12)
+    .info
+      @include outer-container
+      border-bottom: 1px solid #f3f3f3
+      li
+        line-height: 1.5
+      h2, h3, h4
+        padding-top: 0
+    .title
+      line-height: 1
+      h2, h3, h4, h5, p
+        text-align: justify
+    #coursework
+      h3
+        margin-bottom: 0
+      .coursework
+        @include span-columns(4)
+        text-align: center
+        h4
+          margin-bottom: 0
+        p
+          margin-top: 0
+    .date
+      > *
+        display: inline-block
+
+
+// =============================================================================
+// CLOSING QUOTE
+// =============
+
+#quote
+  .quote  
+    position: relative
+    text-align: center
+    color: $white
+
