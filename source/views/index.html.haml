@@ -1,6 +1,7 @@
 = partial "hero"
 
 %main
+
   %section#about.section.contentContainer
     = partial "about"
   
@@ -17,7 +18,7 @@
     = partial "experience"
 
   %section#quote.section
-    .img-holder{"data-height" => "720", "data-image" => "assets/images/photos/coding.jpg", "data-image-mobile" => "assets/images/photos/coding-square.jpg", "data-width" => "1280"}
+    .img-holder{"data-height" => "720", "data-image" => "assets/images/photos/jorge-freelance.jpg", "data-image-mobile" => "assets/images/photos/jorge-freelance-square.jpg", "data-width" => "1280"}
 
   %section#portfolio.section.contentContainer
     = partial "portfolio"
@@ -25,13 +26,5 @@
   %section#closing-quote.section
     = partial "closing-quote"
 
-  %section#contact.section.contentContainer
-    .header.c
-      %h2
-        %a.text{:href => "#"}
-          UNDER CONSTRUCTION
-    .sub-header-container
-      %h4.sub-header
-        It's always good
-        %br/
-        to get in touch.
+  %section#contact.section
+    = partial "contact"

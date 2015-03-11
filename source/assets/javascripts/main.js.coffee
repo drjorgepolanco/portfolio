@@ -44,18 +44,6 @@ openNav = ->
     $navicon.removeClass('is--closed')
   return
 
-# --------------------------------------
-# THIS SCROLLING DOESN'T WORK IN FIREFOX
-# --------------------------------------
-# anchorScroll = (event) ->
-#   id = $(@).attr('href')
-#   offset = header_height
-#   target = $(id).offset().top - offset
-
-#   $('body, html').animate({ scrollTop: target }, 700)
-#   event.preventDefault() 
-#   return
-
 
 # ==============================================================================
 # HANDLERS
@@ -67,34 +55,9 @@ $('.banner a').on(eventType, openNav)
 
 $(window).scroll(navSlide)
 
-# $('.scrollto').on eventType, ->
-#   anchorScroll.call(@, event)
-
 
 # ==============================================================================
-# NAV ACTIVE STATE
-# ================
-
-# sections = $('section')
-# nav = $('nav')
-# nav_height = nav.outerHeight()
-# $(window).on 'scroll', ->
-#   cur_pos = $(@).scrollTop()
-#   sections.each ->
-#     top = $(@).offset().top - nav_height
-#     bottom = top + $(@).outerHeight()
-
-#     if cur_pos >= top and cur_pos <= bottom
-#       nav.find('a').removeClass 'active'
-#       sections.removeClass 'active'
-#       $(@).addClass 'active'
-#       nav.find('a[href="#' + $(@).attr('id') + '"]').addClass 'active'
-#     return
-#   return
-
-# $('#particles-js').on 'mouseenter', ->
-#   nav.find('a').removeClass 'active'
-#   sections.removeClass 'active'
-
+# WINDOW HEIGHT
+# =============
 
 $(".contentContainer").css('min-height', $(window).height())

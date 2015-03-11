@@ -9,11 +9,14 @@ ExpiresByType assets/stylesheets "access plus 1 year"
 ExpiresByType assets/stylesheets/vendor "access plus 1 year"
 ExpiresDefault "access plus 2 days"
 </IfModule>
+
 ## EXPIRES CACHING ##
 
 <IfModule mod_deflate.c>
   # Compress HTML, CSS, JavaScript, Text, XML and fonts
   AddOutputFilterByType DEFLATE assets/images/logos
+  AddOutputFilterByType DEFLATE assets/images/heroica
+  AddOutputFilterByType DEFLATE assets/images/photos
   AddOutputFilterByType DEFLATE assets/javascripts
   AddOutputFilterByType DEFLATE assets/javascripts/vendor/
   AddOutputFilterByType DEFLATE assets/stylesheets

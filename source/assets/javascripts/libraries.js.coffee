@@ -1,6 +1,5 @@
 'use strict'
 
-
 # ==============================================================================
 # PORTFOLIO
 # =========
@@ -110,10 +109,10 @@ $(document).ready ->
       i += 1
     return
 
-  progressCircle('.number-1', '.progress-circle-outer-1', 76)
-  progressCircle('.number-2', '.progress-circle-outer-2', 82)
+  progressCircle('.number-1', '.progress-circle-outer-1', 81)
+  progressCircle('.number-2', '.progress-circle-outer-2', 86)
   progressCircle('.number-3', '.progress-circle-outer-3', 95)
-  progressCircle('.number-4', '.progress-circle-outer-4', 90)
+  progressCircle('.number-4', '.progress-circle-outer-4', 92)
 
 
 # ==============================================================================
@@ -159,11 +158,10 @@ $(document).ready ->
       mode: "grab"
     retina_detect: true
 
-h = $(window).height()
-canvas = $("#particles-js")
-canvas.css("height", h)
+  h = $(window).height()
+  canvas = $("#particles-js")
+  canvas.css("height", h)
 
-c = document.querySelector("canvas")
-$('div#particles-js canvas').css("height", h)
-return
-
+  c = document.querySelector("canvas")
+  $('div#particles-js canvas').css("height", h)
+  return

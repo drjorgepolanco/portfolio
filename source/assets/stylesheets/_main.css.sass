@@ -17,7 +17,7 @@ $darker-gray: #333
 $nav-bg: rgba(255, 255, 255, 0.93)
 
 // Fonts
-$play: "Play", sans-serif
+$play: "Play", $helvetica
 $goudy: "Sorts Mill Goudy", serif
 $helvetica: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif
 
@@ -90,11 +90,15 @@ html
 
 body
   height: auto
+  width: 100%
+  width: 100%
 
 html,
 body
   margin: 0
   padding: 0
+  width: 100%
+  width: 100%
 
 a
   color: $white
@@ -293,15 +297,13 @@ nav
     .nav__list-item
       line-height: 2.5
       list-style: none
-      border: none
-      background: transparent
       display: inherit
 
 .icon-heroica
   color: $medium-gray
   font-size: 40px
   margin-top: 12px
-  margin-left: 25px
+  margin-left: 20px
 
 .icon-menu
   cursor: pointer
@@ -367,6 +369,11 @@ nav
   100%
     opacity: 0
     +webkit-transform(Y, 14px)
+
+
+// --------
+// Sections
+// --------
 
 .section
   &:nth-child(odd)
@@ -922,7 +929,6 @@ canvas
 .project
   @include outer-container
   margin: 2em 0 2em 0
-  // border: 1px solid $light
   position: relative
   background: #222
   .project-image
@@ -932,7 +938,7 @@ canvas
       width: 100%
   .project-button
     @include outer-container
-    padding: 2em
+    padding: 1.5em
     h3
       float: left
       margin: 8px 0 0 0
@@ -983,3 +989,65 @@ canvas
         transition: all .2s ease-in-out
         &:hover
           transform: scale(1.7)
+
+
+// =============================================================================
+// CONTACT
+// =======
+
+#contact
+  padding: 3em 0 3em 0
+
+#contact-button
+  @include outer-container
+  text-align: center
+  padding: 2em
+  a
+    font-family: $play
+    font-size: 2em
+    border-radius: 12px
+    text-transform: uppercase
+    background: $dark-gray
+    color: $light
+    padding: 26px 44px 20px 44px
+    width: 30%
+    text-align: center
+    font-weight: bold
+    -webkit-transition: all .2s
+    transition: all .2s
+    border: 1px solid $light
+    &:hover
+      color: $dark-gray
+      background: $light
+      border: 1px solid $light
+#contact-social
+  @include outer-container
+  text-align: center
+  .icon
+    @include span-columns(12)
+    a
+      font-size: 2.5em
+      color: $light
+      -webkit-transition: all .2s
+      transition: all .2s
+      &:hover
+        opacity: 0.5
+#footer
+  padding-top: 20px
+  text-align: center
+  font-size: 0.8em
+
+@media only screen and (min-width: 766px)
+
+  #contact-social
+    @include outer-container
+    text-align: center
+    .icon
+      @include span-columns(2)
+      a
+        font-size: 1em
+        color: $light
+        -webkit-transition: all .2s
+        transition: all .2s
+        &:hover
+          opacity: 0.5
