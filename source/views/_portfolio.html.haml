@@ -9,8 +9,8 @@
     Cutting-edge
     %br/
     Fundamentals
-#project.wow.bounceInLeft
-  .project
+#project
+  .project.wow.bounceInLeft
     .project-image
       %a{:href => "#"}
         %img{:src => "assets/images/photos/portfolio/heroica-square.jpg", :alt => "My Personal Website"}/
@@ -58,6 +58,25 @@
           &nbspLive
   .project.wow.bounceInRight
     .project-image
+      %a{:href => "https://github.com/drjorgepolanco/node/tree/master/chat_room", :target => "_blank"}
+        %img{:src => "assets/images/photos/portfolio/chat-room.png", :alt => "The Chat Room"}/
+    .project-button
+      %h3 Chat Room
+      %a.more{:href => "#"}
+        More
+    .project-info
+      %span.cancel
+        %i.fa.fa-times-circle.fa-lg
+      %h2 Chat Room
+      %h4 Online real-time Chatroom
+      %p Node.js, Express.js, Socket.io, Redis, HTTP & Jade
+      %br/
+      %p.repo
+        %a{:href => "https://github.com/drjorgepolanco/node/tree/master/chat_room", :target => "_blank"} 
+          %i.fa.fa-github.fa-lg
+          &nbspRepo
+  .project.wow.bounceInLeft
+    .project-image
       %a{:href => "http://drjorgepolanco.com/secret_diary/", :target => "_blank"}
         %img{:src => "assets/images/photos/portfolio/secret-diary-square.jpg", :alt => "Secret Diary"}/
     .project-button
@@ -79,7 +98,7 @@
         %a{:href => "http://drjorgepolanco.com/secret_diary/", :target => "_blank"} 
           %i.fa.fa-link.fa-lg
           &nbspLive
-  .project.wow.bounceInLeft
+  .project.wow.bounceInDown
     .project-image
       %a{:href => "http://drjorgepolanco.com/js_apps/music-videos/", :target => "_blank"}
         %img{:src => "assets/images/photos/portfolio/music-videos-square.jpg", :alt => "Music Videos"}/
@@ -102,7 +121,7 @@
         %a{:href => "http://drjorgepolanco.com/js_apps/music-videos/", :target => "_blank"} 
           %i.fa.fa-link.fa-lg
           &nbspLive
-  .project.wow.bounceInDown
+  .project.wow.bounceInRight
     .project-image
       %a{:href => "https://github.com/drjorgepolanco/mks/tree/master/ruby/task-manager", :target => "_blank"}
         %img{:src => "assets/images/photos/portfolio/project-manager-square.png", :alt => "Task Manager"}/
@@ -121,7 +140,7 @@
         %a{:href => "https://github.com/drjorgepolanco/mks/tree/master/ruby/task-manager", :target => "_blank"} 
           %i.fa.fa-github.fa-lg
           &nbspRepo
-  .project.wow.bounceInRight
+  .project.wow.bounceInLeft
     .project-image
       %a{:href => "http://drjorgepolanco.com/js_apps/todo-project/", :target => "_blank"}
         %img{:src => "assets/images/photos/portfolio/to-do-square.jpg", :alt => "To Do"}/
@@ -144,7 +163,7 @@
         %a{:href => "http://drjorgepolanco.com/js_apps/todo-project/", :target => "_blank"} 
           %i.fa.fa-link.fa-lg
           &nbspLive
-  .project.wow.bounceInLeft
+  .project.wow.bounceInDown
     .project-image
       %a{:href => "http://drjorgepolanco.com/js_apps/bakery/", :target => "_blank"}
         %img{:src => "assets/images/photos/portfolio/bakery-square.jpg", :alt => "The Bakery"}/
@@ -167,7 +186,7 @@
         %a{:href => "http://drjorgepolanco.com/js_apps/bakery/", :target => "_blank"} 
           %i.fa.fa-link.fa-lg
           &nbspLive
-  .project.wow.bounceInDown
+  .project.wow.bounceInRight
     .project-image
       %a{:href => "https://github.com/drjorgepolanco/mks/tree/master/ruby/library", :target => "_blank"}
         %img{:src => "assets/images/photos/portfolio/library-square.png", :alt => "The Library"}/
@@ -186,26 +205,26 @@
         %a{:href => "https://github.com/drjorgepolanco/mks/tree/master/ruby/library", :target => "_blank"} 
           %i.fa.fa-github.fa-lg
           &nbspRepo
-  .project.wow.bounceInRight
-    .project-image
-      %a{:href => "http://drjorgepolanco.com/js_apps/guess-the-number-jquery.html", :target => "_blank"}
-        %img{:src => "assets/images/photos/portfolio/guess.png", :alt => "Guess The Number"}/
-    .project-button
-      %h3 Guess
-      %a.more{:href => "#"}
-        More
-    .project-info
-      %span.cancel
-        %i.fa.fa-times-circle.fa-lg
-      %h2 Guess
-      %h4 Number Guessing Game
-      %p JavaScript, jQuery, HTML5 & CSS3.
-      %br/
-      %p.repo
-        %a{:href => "https://github.com/drjorgepolanco/mks/blob/master/immersive/javascript/guess-the-number-jquery.html", :target => "_blank"} 
-          %i.fa.fa-github.fa-lg
-          &nbspRepo
-      %p.live
-        %a{:href => "http://drjorgepolanco.com/js_apps/guess-the-number-jquery.html", :target => "_blank"} 
-          %i.fa.fa-link.fa-lg
-          &nbspLive
+  / .project.wow.bounceInLeft
+  /   .project-image
+  /     %a{:href => "http://drjorgepolanco.com/js_apps/guess-the-number-jquery.html", :target => "_blank"}
+  /       %img{:src => "assets/images/photos/portfolio/guess.png", :alt => "Guess The Number"}/
+  /   .project-button
+  /     %h3 Guess
+  /     %a.more{:href => "#"}
+  /       More
+  /   .project-info
+  /     %span.cancel
+  /       %i.fa.fa-times-circle.fa-lg
+  /     %h2 Guess
+  /     %h4 Number Guessing Game
+  /     %p JavaScript, jQuery, HTML5 & CSS3.
+  /     %br/
+  /     %p.repo
+  /       %a{:href => "https://github.com/drjorgepolanco/mks/blob/master/immersive/javascript/guess-the-number-jquery.html", :target => "_blank"} 
+  /         %i.fa.fa-github.fa-lg
+  /         &nbspRepo
+  /     %p.live
+  /       %a{:href => "http://drjorgepolanco.com/js_apps/guess-the-number-jquery.html", :target => "_blank"} 
+  /         %i.fa.fa-link.fa-lg
+  /         &nbspLive
