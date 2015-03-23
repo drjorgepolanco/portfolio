@@ -111,7 +111,7 @@ $(document).ready ->
     progressCircle('.number-4', '.progress-circle-outer-4', 92)
     return
 
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
     triggerCycle()
   else
     $('#skills').one 'mouseenter', ->
