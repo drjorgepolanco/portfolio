@@ -33,7 +33,7 @@
             mediaWidth: 1600,
             mediaHeight: 900,
             parallax: true,
-            touch: false
+            touch: true
         },
         pluginName = 'imageScroll',
         dataKey = "plugin_" + pluginName,
