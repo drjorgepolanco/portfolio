@@ -1,9 +1,7 @@
-/ Variables
-- photos = "assets/images/photos/"
-
 = partial "hero"
 
 %main
+
   %section#about.section.contentContainer
     = partial "about"
   
@@ -14,19 +12,13 @@
     = partial "skills"
 
   %section#quote.section
-    .img-holder{"data-height" => "720", 
-                "data-image" => "#{photos}big/coding.jpg", 
-                "data-image-mobile" => "#{photos}background/coding-square.jpg", 
-                "data-width" => "1280"}
+    .img-holder{"data-height" => "720", "data-image" => "assets/images/photos/big/coding.jpg", "data-image-mobile" => "assets/images/photos/background/coding-square.jpg", "data-width" => "1280"}
   
   %section#experience.section.contentContainer
     = partial "experience"
 
   %section#quote.section
-    .img-holder{"data-height" => "720", 
-                "data-image" => "#{photos}big/jorge-freelance.jpg", 
-                "data-image-mobile" => "#{photos}background/jorge-freelance-square.jpg", 
-                "data-width" => "1280"}
+    .img-holder{"data-height" => "720", "data-image" => "assets/images/photos/big/jorge-freelance.jpg", "data-image-mobile" => "assets/images/photos/background/jorge-freelance-square.jpg", "data-width" => "1280"}
 
   %section#portfolio.section.contentContainer
     = partial "portfolio"

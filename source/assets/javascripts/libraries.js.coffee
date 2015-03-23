@@ -1,10 +1,11 @@
 'use strict'
 
+$(document).ready ->
+
 # ==============================================================================
 # PORTFOLIO
 # =========
 
-$(document).ready ->
   $('.project-button').on 'click', '.more', (event) ->
     event.preventDefault()
     $(@).parent().parent().find('.project-info').show()
@@ -13,13 +14,12 @@ $(document).ready ->
     event.preventDefault()
     $(@).parent().hide()
     return
-  return
+
 
 # ==============================================================================
 # EXPERIENCE
 # ==========
 
-$(document).ready ->
   wow = new WOW(
     boxClass: 'wow'
     animateClass: 'animated'
@@ -27,8 +27,6 @@ $(document).ready ->
     mobile: true
     live: true
     callback: (box) ->
-      # the callback is fired every time an animation is started
-      # the argument that is passed in is the DOM node being animated
       return
   )
   wow.init()
@@ -38,7 +36,6 @@ $(document).ready ->
 # SLICK
 # =====
 
-$(document).ready ->
   $('.responsive').slick
     infinite: true
     speed: 600
@@ -86,14 +83,12 @@ $(document).ready ->
           swipeToSlide: true
       }
     ]
-  return
 
 
 # ==============================================================================
 # PROGRESS-CIRCLE
 # ===============
 
-$(document).ready ->
   progressCircle = (number, circle, percentage) ->
     $num = $(number)
     times = 0
@@ -109,17 +104,24 @@ $(document).ready ->
       i += 1
     return
 
-  progressCircle('.number-1', '.progress-circle-outer-1', 81)
-  progressCircle('.number-2', '.progress-circle-outer-2', 86)
-  progressCircle('.number-3', '.progress-circle-outer-3', 95)
-  progressCircle('.number-4', '.progress-circle-outer-4', 92)
+  triggerCycle = () ->
+    progressCircle('.number-1', '.progress-circle-outer-1', 87)
+    progressCircle('.number-2', '.progress-circle-outer-2', 86)
+    progressCircle('.number-3', '.progress-circle-outer-3', 95)
+    progressCircle('.number-4', '.progress-circle-outer-4', 92)
+    return
 
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.platform))
+    triggerCycle()
+  else
+    $('#skills').one 'mouseenter', ->
+      triggerCycle()
+    
 
 # ==============================================================================
 # CharCycle
 # =========
 
-$(document).ready ->
   $('.c').mouseenter ->
     if $(@).hasClass('cycling') == false
       $(@).charcycle {'target':'.text'}
@@ -128,40 +130,44 @@ $(document).ready ->
 # ==============================================================================
 # PARTICLES
 # =========
-
-$(document).ready ->
-  particlesJS "particles-js",
-    particles:
-      color: "#666"
-      shape: "circle"
-      opacity: 0.8
-      size: 2
-      size_random: true
-      nb: 100
-      line_linked:
-        enable_auto: true
-        distance: 250
-        color: "#FF3300"
+  triggerParticles = (size, distance, width, speed) ->
+    particlesJS "particles-js",
+      particles:
+        color: "#666"
+        shape: "circle"
         opacity: 0.8
-        width: 0.1
-        condensed_mode:
-          enable: false
-          rotateX: 600
-          rotateY: 600
-      anim:
+        size: size
+        size_random: true
+        nb: 100
+        line_linked:
+          enable_auto: true
+          distance: distance
+          color: "#FF3300"
+          opacity: 0.8
+          width: width
+          condensed_mode:
+            enable: false
+            rotateX: 600
+            rotateY: 600
+        anim:
+          enable: true
+          speed: speed
+      interactivity:
         enable: true
-        speed: 4
-    interactivity:
-      enable: true
-      mouse:
-        distance: 250
-      mode: "grab"
-    retina_detect: true
+        mouse:
+          distance: 250
+        mode: "grab"
+      retina_detect: true
 
-  h = $(window).height()
-  canvas = $("#particles-js")
-  canvas.css("height", h)
+    h = $(window).height()
+    canvas = $("#particles-js")
+    canvas.css("height", h)
 
-  c = document.querySelector("canvas")
-  $('div#particles-js canvas').css("height", h)
-  return
+    c = document.querySelector("canvas")
+    $('div#particles-js canvas').css("height", h)
+    return
+
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.platform))
+    triggerParticles(0.5, 50, 0.2, 2)
+  else
+    triggerParticles(2, 250, 0.4, 4)
