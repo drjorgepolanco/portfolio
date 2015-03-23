@@ -130,6 +130,7 @@ $(document).ready ->
 # ==============================================================================
 # PARTICLES
 # =========
+
   triggerParticles = (size, distance, width, speed) ->
     particlesJS "particles-js",
       particles:

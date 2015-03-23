@@ -1,8 +1,8 @@
 'use strict'
 
 # ==============================================================================
-# CONFIG
-# ======
+# RESPONSIVE NAV
+# ==============
 
 $root = $('html')
 $nav_header = $('.banner')
@@ -11,11 +11,6 @@ header_height = $('.banner').height()
 hero_height = $('.hero').height()
 offset_val = hero_height - header_height
 eventType = if document.ontouchstart != null then 'click' else 'touchstart'
-
-
-# ==============================================================================
-# FUNCTIONS
-# =========
 
 navSlide = ->
   scroll_top = $(window).scrollTop()
@@ -44,15 +39,8 @@ openNav = ->
     $navicon.removeClass('is--closed')
   return
 
-
-# ==============================================================================
-# HANDLERS
-# ========
-
 $navicon.on(eventType, menuToggle)
-
 $('.banner a').on(eventType, openNav)
-
 $(window).scroll(navSlide)
 
 
