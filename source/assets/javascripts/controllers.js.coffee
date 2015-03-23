@@ -111,7 +111,7 @@ $(document).ready ->
     progressCircle('.number-4', '.progress-circle-outer-4', 92)
     return
 
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.platform))
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
     triggerCycle()
   else
     $('#skills').one 'mouseenter', ->
@@ -168,7 +168,7 @@ $(document).ready ->
     $('div#particles-js canvas').css("height", h)
     return
 
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.platform))
-    triggerParticles(0.5, 50, 0.2, 2)
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+    triggerParticles(1, 100, 0.3, 2)
   else
     triggerParticles(2, 250, 0.4, 4)
